@@ -3,13 +3,27 @@ let bottom =document.getElementById("bottom-set")
 import {menuArray} from '/data.js'
 
 
+let prices = {}
+
 document.addEventListener("click",function(event){
-    if(event.target.dataset.uuid){
-        dealWithMath(event.target.dataset.uuid)
-        function bottomSet(data){
-            bottom.innerHTML+=`
-            <p class = 'added-text'>${data.name}</p>
-            `;
+    /* checks to see if the uuid matches what is clicked */
+    if (event.target.dataset.uuid) {
+        dealWithMath(event.target.dataset.uuid) /* check to see what is being controlled the right uuid */
+        /* controlls the bottom data "your order" */
+        function bottomSet(data) {
+            let Name = data.name
+            let Price = data.price
+            if (!prices[Name]) { /* checks if the name already exists in the prices object */
+                prices[Name] = Price;
+            } else {
+                prices[Name] += Price;
+            }
+            bottom.innerHTML = ""
+            for (let item in prices) {
+                bottom.innerHTML += `
+                <div class = 'item'><span>${item}</span><span>$${prices[item]}</span></div>`
+            }
+
     }
     function dealWithMath(data){
     const filteredLIst = menuArray.filter(function(dataof){
@@ -22,6 +36,14 @@ document.addEventListener("click",function(event){
     }
 })
 
+Array.prototype.count = function(item){ 
+            let appearance = 0; //This is the default value
+            this.forEach(index=>{
+                if (index === item)
+                    appearance++
+            });
+            return appearance;
+        }
 
 /*                                    TASK
 Figure out how to count how many time a button has been clidked using the uuid

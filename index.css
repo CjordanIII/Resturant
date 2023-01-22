@@ -9,7 +9,6 @@ body {
 /* Main */
 .container{
     margin-top: 50px;
-    width: auto;
     height: 140px;
     display: flex;
     gap:10px;
@@ -52,8 +51,12 @@ li{
 h2{
     text-align: center;
 }
-.added-text{
-    margin:30px auto 15px 10px;
-}
+.item{
+    display: flex;
+    justify-content: space-around;
+} 
+
+
+
 
 
