@@ -17,12 +17,28 @@
         <div id="main"></div>
         <div>
             <div class="container-1">
-                    <h2>Your order</h2>
+                    <h2 class="check-out" id="check-out">Your order</h2>
+                    <!-- list of food -->
                     <div id="bottom-set" class="bottom-set"></div>
             </div>
+            <div class="line-dark" id="line-dark"></div>
+        </div>
+        <div id="Total" class="Total"></div>
+        <div class="container-3" id='container-3'></div>
+        <div class="model" id="model">
+            <h1 class="centered">Enter card details</h1>
+            <form action ='' method="get">
+                <input type="text"class='labels' name="name" id="name"  placeholder='Enter your name'required>
+                <input type="email" class='labels' name="email" id="email" placeholder="Enter your email" autocomplete="email" required>
+                <input id = 'ccn' class='labels' type="text"  inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="none" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" required>
+                <input name="credit-cvc" class='labels' class="cc-cvc" type="tel" pattern="\d*" maxlength="4" placeholder="CVC">
+                <button class='submit'type="submit">Pay</button>
+
+            </form>
         </div>
     
     </main>
+    
     
 </body>
 </html>

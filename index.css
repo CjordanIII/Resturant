@@ -54,7 +54,83 @@ h2{
 .item{
     display: flex;
     justify-content: space-around;
+    margin-bottom: 20px;
+    font-size: large;
 } 
+.check-out{
+    display: none;
+}
+.line-dark{
+    border: 1px solid #393333;
+    margin: 20px 15px 10px 15px;
+}
+.Total{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+.container-3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+.complete-btn{
+    border:none;
+    padding: 18px 69px 18px 69px;
+    background-color:#16DB99;
+    color:#FFFFFF;
+    font-weight: 700;
+    font-size: 15px;
+    transition: 0.1s;
+}
+.complete-btn:active{
+    scale: 1.03;
+    opacity: .9;
+    transition: 0.1s;
+}
+.model{
+    position: fixed;
+    width: 328px;
+    height: 335px;
+    border-radius: 3.89px;
+    top: 185px;
+    left: 18px;
+    background-color: white;
+    box-shadow: 0px 0px 5px black;
+}
+.centered{
+    text-align: center;
+}
+.labels{
+    border: 1px solid #757575;
+    border-radius: 3px;
+    padding: 9px 66px 13px 12px;
+    margin: 0px 2px 9px 35px;
+}
+.submit{
+    background-color: #16DB99;
+    color: #FFFFFF;
+    padding: 9px 121px 13px 98px;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+    margin-left: 36px;
+    transition: 0.1s;
+    font-weight: 700;
+    font-size: 20px;
+}
+.submit:active{
+    scale: 1.03;
+    opacity: .9;
+    transition: 0.1s;
+}
+
+
+
+
+
 
 
 
