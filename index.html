@@ -16,6 +16,7 @@
         <!-- js main -->
         <div id="main"></div>
         <div>
+            <div id = 'thanks'></div>
             <div class="container-1">
                     <h2 class="check-out" id="check-out">Your order</h2>
                     <!-- list of food -->
@@ -27,12 +28,12 @@
         <div class="container-3" id='container-3'></div>
         <div class="model" id="model">
             <h1 class="centered">Enter card details</h1>
-            <form action ='' method="get">
+            <form action ='' method="">
                 <input type="text"class='labels' name="name" id="name"  placeholder='Enter your name'required>
                 <input type="email" class='labels' name="email" id="email" placeholder="Enter your email" autocomplete="email" required>
                 <input id = 'ccn' class='labels' type="text"  inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="none" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" required>
-                <input name="credit-cvc" class='labels' class="cc-cvc" type="tel" pattern="\d*" maxlength="4" placeholder="CVC">
-                <button class='submit'type="submit">Pay</button>
+                <input name="credit-cvc" class='labels' id='cvc'class="cc-cvc" type="tel" pattern="\d*" maxlength="3" placeholder="CVC">
+                <button class='submit' id='submit' type="button">Pay</button>
 
             </form>
         </div>
